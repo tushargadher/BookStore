@@ -27,12 +27,6 @@ const LoginSchema = Yup.object({
     password: Yup.string().min(6).required("Please Enter Password")
 })
 
-
-
-
-
-
-
 const Login = () => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');

@@ -1,27 +1,27 @@
 
+import { Button } from '@mui/material';
 import { Container } from '@mui/system';
-import Typography from '@mui/material/Typography';
 import React from 'react';
+import { useNavigate } from "react-router-dom";
+
 
 const PageNotFound = () => {
-    <>
-        <Container>
-            <Typography
-                style={{
-                    fontSize: "32px",
-                    textAlign: "center",
-                    color: "#414141",
-                    fontWeight: "bold",
-                    marginTop: "50px",
-                    marginBottom: "75px"
-                }}
-            >
-                Edit Product
-            </Typography>
+    const navigate = useNavigate();
+    return (
 
-        </Container>
+        <>
+            <Container>
 
-    </>
+                <img src="https://webdesigndev.com/wp-content/uploads/2015/04/Free-404-Error-Page-PSD-Template.jpg" alt="" />
+                <Button variant="contained" color="primary" onClick={()=>{
+                    navigate("/");
+                }}>
+                    Back to Home
+                </Button>
+            </Container>
+
+        </>
+    )
 }
 
 export default PageNotFound;

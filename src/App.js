@@ -5,7 +5,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import EditProduct from "./Pages/EditProduct";
 import Footer from "./Components/Footer";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from "./Components/PageNotFound";
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/" element={<EditProduct />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
-          <Route exact path="/*" element={<PageNotFound />} />
+          <Route path="/*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </Router>

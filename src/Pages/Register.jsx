@@ -122,16 +122,18 @@ const Register = () => {
                             >
                                 {/* first name grid */}
                                 <Grid item xs={6}>
-                                    <Typography
-                                        style={{
-                                            color: "#414141",
-                                            marginTop: "20px",
-                                            marginBottom: "15px"
-                                        }}
-                                    >
-                                        First Name *
-                                    </Typography>
-
+                                    <Box style={{ display: "flex" }}>
+                                        <Typography
+                                            style={{
+                                                color: "#414141",
+                                                marginTop: "20px",
+                                                marginBottom: "15px"
+                                            }}
+                                        >
+                                            First Name *
+                                        </Typography>
+                                        {touched.firstName && <span style={{ color: "red",marginTop: "20px" }}> {errors.firstName}</span>}
+                                    </Box>
                                     <input
                                         type="text" name="firstName" id="firstName" label="FirstName"
                                         value={values.firstName}
@@ -142,19 +144,22 @@ const Register = () => {
                                             height: "40px"
                                         }}
                                     />
-                                    {touched.firstName && <span style={{ color: "red" }}> {errors.firstName}</span>}
+
                                 </Grid>
                                 {/* last name grid */}
                                 <Grid item xs={6}>
-                                    <Typography
-                                        style={{
-                                            color: "#414141",
-                                            marginTop: "20px",
-                                            marginBottom: "15px"
-                                        }}
-                                    >
-                                        Last Name *
-                                    </Typography>
+                                    <Box style={{ display: "flex" }}>
+                                        <Typography
+                                            style={{
+                                                color: "#414141",
+                                                marginTop: "20px",
+                                                marginBottom: "15px"
+                                            }}
+                                        >
+                                            Last Name *
+                                        </Typography>
+                                        {touched.lastName && <span style={{ color: "red",marginTop: "20px" }}> {errors.lastName}</span>}
+                                    </Box>
                                     <input
                                         type="text" name="lastName" id="lastName" label="LastName"
                                         value={values.lastName}
@@ -165,20 +170,23 @@ const Register = () => {
                                             height: "40px"
                                         }}
                                     />
-                                    {touched.lastName && <span style={{ color: "red" }}> {errors.lastName}</span>}
+
                                 </Grid>
                             </Grid>
 
                             <Grid>
-                                <Typography
-                                    style={{
-                                        color: "#414141",
-                                        marginTop: "40px",
-                                        marginBottom: "15px"
-                                    }}
-                                >
-                                    Email Address *
-                                </Typography>
+                                <Box style={{ display: "flex" }}>
+                                    <Typography
+                                        style={{
+                                            color: "#414141",
+                                            marginTop: "40px",
+                                            marginBottom: "15px"
+                                        }}
+                                    >
+                                        Email Address *
+                                    </Typography>
+                                    {touched.email && <span style={{ color: "red",marginTop: "40px" }}> {errors.email}</span>}
+                                </Box>
                                 <input
                                     type="email" name="email" id="email" label="Email"
                                     value={values.email}
@@ -189,7 +197,7 @@ const Register = () => {
                                         height: "40px"
                                     }}
                                 />
-                                {touched.email && <span style={{ color: "red" }}> {errors.email}</span>}
+
                             </Grid>
                         </Box>
 
@@ -223,16 +231,18 @@ const Register = () => {
                             >
                                 {/* first name grid */}
                                 <Grid item xs={6}>
-                                    <Typography
-                                        style={{
-                                            color: "#414141",
-                                            marginTop: "20px",
-                                            marginBottom: "15px"
-                                        }}
-                                    >
-                                        Password *
-                                    </Typography>
-
+                                    <Box style={{ display: "flex" }}>
+                                        <Typography
+                                            style={{
+                                                color: "#414141",
+                                                marginTop: "20px",
+                                                marginBottom: "15px"
+                                            }}
+                                        >
+                                            Password *
+                                        </Typography>
+                                        {touched.password && <span style={{ color: "red",marginTop: "20px" }}> {errors.password}</span>}
+                                    </Box>
                                     <input
                                         type="password" name="password" id="password" label="password"
                                         value={values.password}
@@ -243,19 +253,22 @@ const Register = () => {
                                             height: "40px"
                                         }}
                                     />
-                                    {touched.password && <span style={{ color: "red" }}> {errors.password}</span>}
+
                                 </Grid>
                                 {/* last name grid */}
                                 <Grid item xs={6}>
-                                    <Typography
-                                        style={{
-                                            color: "#414141",
-                                            marginTop: "20px",
-                                            marginBottom: "15px"
-                                        }}
-                                    >
-                                        Conform Password *
-                                    </Typography>
+                                    <Box style={{ display: "flex" }}>
+                                        <Typography
+                                            style={{
+                                                color: "#414141",
+                                                marginTop: "20px",
+                                                marginBottom: "15px"
+                                            }}
+                                        >
+                                            Conform Password *
+                                        </Typography>
+                                        {touched.cpassword && <span style={{ color: "red",marginTop: "20px" }}> {errors.cpassword}</span>}
+                                    </Box>
                                     <input
                                         type="password" name="cpassword" id="cpassword" label="cpassword"
                                         value={values.cpassword}
@@ -266,7 +279,7 @@ const Register = () => {
                                             height: "40px"
                                         }}
                                     />
-                                    {touched.cpassword && <span style={{ color: "red" }}> {errors.cpassword}</span>}
+
                                 </Grid>
                             </Grid>
                             {/* register button */}
